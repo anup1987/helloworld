@@ -10,5 +10,5 @@ steps:
         cd modules/cloud_run
         pwd
         terraform init
-        terraform apply -var="imagename=gcr.io/ingrammicroproject/hellospringwebapplication:latest"  -var="serviceName=app1" -auto-approve
+        terraform apply -var="project_id=ingrammicroproject" -var="imagename=gcr.io/ingrammicroproject/hellospringwebapplication:latest"  -var="serviceName=app1" -auto-approve
         ls -lart
