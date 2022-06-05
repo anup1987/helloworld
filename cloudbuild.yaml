@@ -9,6 +9,6 @@ steps:
         git branch
         cd modules/cloud_run
         pwd
-        terraform init -backend=true -backend-config="gcs" -backend-config="project=ingrammicroproject" -backend-config="path=terraform.tfstate"
+        terraform init
         terraform apply -var="imagename=gcr.io/ingrammicroproject/hellospringwebapplication:latest"  -var="serviceName=app1" -auto-approve
         ls -lart
